@@ -1,0 +1,44 @@
+.footer h2{
+  text-decoration: none;
+  color: white;
+  font-style: oblique;
+  text-align: left;
+  margin-left: 6vw;
+  font-size: 1.5vw;
+}
+.footer {
+  background-color:black;
+  width: 100%;
+  height: 5vw;
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+   flex-wrap: wrap; 
+  }
+  
+  .movies {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 5vw;
+    position: fixed;
+    font-display: inherit;
+    bottom: 0;
+    margin-left: 20vw;
+    text-decoration: none;
+  }
+  li {
+    float: left;
+    margin-left: 6vw;
+    font-size: 1.2vw;
+    padding-bottom: 2vh;
+    color: #bc6ff1;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #bc6ff1;
+    font-weight: bold;
+  }
+  
