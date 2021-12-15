@@ -1,0 +1,67 @@
+h2{
+    text-align: center;
+  }
+  .column {
+    float: left;
+    width: 20%;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    margin-left: 10px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(226, 42, 42);
+    text-align: center;
+    cursor: pointer;
+    width: 40%;
+  }
+  img{
+    height: 20%;
+    width: 20%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  p
+  {
+      color: white;
+  }
