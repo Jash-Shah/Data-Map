@@ -4,7 +4,7 @@
   font-style: oblique;
   text-align: left;
   margin-left: 6vw;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 .footer {
   background-color:black;
@@ -12,8 +12,8 @@
   height: 5vw;
   position: fixed;
   overflow: hidden;
-  bottom: 0;
    flex-wrap: wrap; 
+   bottom:0
   }
   
   .movies {
@@ -22,9 +22,9 @@
     height: 5vw;
     position: fixed;
     font-display: inherit;
-    bottom: 0;
-    margin-left: 20vw;
+    margin-left: 20rem;
     text-decoration: none;
+    bottom: -12px;
   }
 
   a {
@@ -36,4 +36,18 @@
   .space
   {
     word-spacing: 30px;
+  }
+  .movie-name
+  {
+    display:inline-block;
+    padding-right:7%;
+    font-size:1rem;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+    bottom: 0;
+  }
+  .movie-name:last-child{
+    padding-right:10px;
   }

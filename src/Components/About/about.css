@@ -1,67 +1,87 @@
-h2{
-    text-align: center;
+.section-heading {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  text-align: center;
+  color: purple;
+}
+.item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(160, 32, 240, 0.5);
+}
+.item:hover .hidden-content {
+  visibility: inherit;
+  transform: translateX(-100px);
+  background: linear-gradient(
+    105deg,
+    rgba(255, 77, 30, 1) 0%,
+    rgba(255, 44, 109, 1) 100%
+  );
+  text-align: center;
+  top: 0;
+  z-index: 2;
+  border-radius:15px;
+  padding: 3px;
+  animation-name: bounce-up;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  transform-origin: bottom;
+  animation-timing-function: ease;
+}
+@keyframes bounce-up {
+  0% {
+    transform: translateY(0);
   }
-  .column {
-    float: left;
-    width: 20%;
-    margin-bottom: 10px;
-    padding: 0 8px;
-    margin-left: 10px;
+  50% {
+    transform: translateY(-70px);
   }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
+  100% {
+    transform: translateY(0);
   }
-  
-  .about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
+}
+
+.showed-content:hover {
+  cursor: pointer;
+  bottom: 0;
+  animation-name: bounce;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  transform-origin: bottom;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
   }
-  
-  .container {
-    padding: 0 16px;
+  50% {
+    transform: translateY(50px);
   }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  100% {
+    transform: translateY(0);
   }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: rgb(226, 42, 42);
-    text-align: center;
-    cursor: pointer;
-    width: 40%;
-  }
-  img{
-    height: 20%;
-    width: 20%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-  p
-  {
-      color: white;
-  }
+}
+.hidden-content {
+  visibility: hidden;
+  text-align: right;
+}
+.showed-content {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.github
+{
+  text-align: center;
+  color: white;
+  padding-top:10px;
+}
+.fab
+{
+  color: #A865C9;
+  font-size:20px;
+}
+.fab:hover
+{
+  color: white;
+  transform: scale(1.2);
+}

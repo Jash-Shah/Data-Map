@@ -11,7 +11,7 @@ const Footer = () => {
     );
     // console.log(data.results[0].title)
     const newArray = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       newArray[i]=data.results[i].title;    
     }
     console.log(newArray)
@@ -24,22 +24,23 @@ const Footer = () => {
   }, [])
   return (
     <div className="footer">
-      <h2>Trending Movies</h2>
+    <h2>Trending Movies</h2>
+
       <div className="movies">
-        <ul>
-          <p  style={{paddingLeft:"50px"}}>
-            <a
+        <div>
+            {/* <a
               href="https://www.youtube.com/watch?v=pWdKf3MneyI"
               target="_blank"
               rel="noreferrer"
-            >
+              style={{color: 'white'}}
+            > */}
+              <div>
               {content && content.map((c)=>{
-                <p>c.join('     ')</p> 
-               return c
+                return <div className="movie-name"> {c}</div>
              })}
-            </a>
-            </p>
-        </ul>
+             </div> 
+            {/* </a> */}
+        </div>
       </div>
     </div>
   );
