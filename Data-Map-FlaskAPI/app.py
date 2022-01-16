@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 import sqlite3
 
+from sqlalchemy import null
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -14,8 +16,11 @@ def similar_to(movie):
     similar_movies = cursor.execute("SELECT * FROM Movies WHERE title=?",(movie, ))
     similar = similar_movies.fetchall()
     res = {}
-    for i in range(1,len(similar[0])):
-        res[i] =  similar[0][i]
+    try:
+        for i in range(1,len(similar[0])):
+            res[i] =  similar[0][i]
+    except:
+        res = null
     return jsonify(res)
     
 
