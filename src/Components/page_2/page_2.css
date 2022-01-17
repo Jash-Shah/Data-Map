@@ -1,0 +1,57 @@
+*{
+    overflow: hidden;
+}
+.left{
+    opacity: initial;
+  position: relative;
+  margin-top: 2vh;
+    bottom: 3vh;
+    left: 20px;
+    width: 100%;
+    max-width: 20%;
+    height: 100%;
+    max-height: 100%;
+    /* border-radius: 1vw; */
+    font-size: 2.5vh;
+    color: white;
+  }
+  .left img{
+    bottom: 20vh;
+    left: 20px;
+    /* width: 100%;
+    max-width: 20vw;
+    height: 20vh; */
+    width: 300px;
+    height: 50%;
+    padding-bottom: 2vh;
+    border-radius:10px;
+  }
+  .left button{
+   
+   background-color: red;
+   color: white;
+   width: 70%;
+    max-width: 8vw;
+    height: 4vh;
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 3vw;
+  }
+   .left button p{
+      font-size: 1vw;
+      font-weight: bolder;
+      position: relative;
+  }
+  #page2{
+    color: aliceblue;
+    font-size: 1.5vw;
+  }
+  .left h1{
+    font-size: 100%;
+    font-weight: bolder;
+    margin-left: 3.5vw;
+  }
+  #overview{
+    font-size: 80%;
+    padding-top: 5%; 
+  }

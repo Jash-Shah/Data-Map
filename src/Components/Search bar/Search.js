@@ -4,8 +4,11 @@ import { createTheme } from "@material-ui/core/styles";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
  import axios from "axios";
+ import Page2 from "../page_2/page_2";
+ import { useNavigate } from "react-router-dom";
   
 const Search = () => {
+  let navigate = useNavigate();
     const [type, setType] = useState(0);
     const [searchText, setSearchText] = useState("");
     const [page,setPage]=useState();
@@ -20,11 +23,12 @@ const Search = () => {
   });
     const fetchSearch = async () => {
       try {
-        const { data } = await axios.get(
-          `https://api.themoviedb.org/3/search/movie}?api_key=${
-           api_key
-          }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
-        );
+        // const { data } = await axios.get(
+        //   `https://api.themoviedb.org/3/search/movie}?api_key=${
+        //    api_key
+        //   }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+        // );
+        navigate(`/p?q=${ searchText }`);
         // console.log(data);
       } catch (error) {
         console.error(error);
@@ -33,7 +37,7 @@ const Search = () => {
 
     useEffect(() => {
       window.scroll(0, 0);
-      fetchSearch();
+      // fetchSearch();
       // eslint-disable-next-line
     }, [type, page]);
 
@@ -63,6 +67,7 @@ const Search = () => {
           <Button
             onClick={fetchSearch}
             variant="contained"
+            className="hi"
             style={{ marginLeft: -70,backgroundColor:'transparent',color:'white' }}
           >
             <SearchIcon fontSize="large" />
