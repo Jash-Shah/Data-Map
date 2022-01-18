@@ -34,6 +34,7 @@ def similar_to(user_movie):
     except:
         res = null  
         final = null
+    final.headers.add("Access-Control-Allow-Origin","*")
     return jsonify(final)
     
 
@@ -47,6 +48,7 @@ def is_in(movie):
     is_movie =  cursor.execute("SELECT COUNT(title) FROM Movies WHERE LOWER(title)=?",(movie,))
     is_movie = is_movie.fetchone()
     print(is_movie)
+    is_movie.headers.add("Access-Control-Allow-Origin","*")
     return jsonify(is_movie)
 
 
