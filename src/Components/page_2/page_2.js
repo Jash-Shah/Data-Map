@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import SingleContent from "../Movie/SingleContent/SingleContent";
 import { img_500 } from "../../config/config";
 import { searchText } from "../Search bar/Search";
 import { useSearchParams } from "react-router-dom";
 import "./page_2.css";
-
+import Map from "../Map/Map";
 const Page2 = () => {
   const [content, setContent] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
@@ -15,7 +15,7 @@ const Page2 = () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
     );
-     console.log(data.results[0]);
+    //  console.log(data);
     setContent(data.results[0]);
   };
   const fetchVideo = async () => {
@@ -33,13 +33,9 @@ const Page2 = () => {
   return (
     <div className="second">
       <h1>"</h1>
+      <div className="top">
       <div className="left">
-        <h1>{content.original_title}({(
-                      content.first_air_date ||
-                      content.release_date ||
-                      "-----"
-                    ).substring(0, 4)}
-                    )</h1>
+        <h1>{content.original_title} </h1>
         <img src={`${img_500}/${content.backdrop_path}`} />
         <button>
           {" "}
@@ -48,12 +44,18 @@ const Page2 = () => {
             href="https://www.youtube.com/watch?v=8YjFbMbfXaQ"
             target="_blank"
           >
-            <p>Watch Trailer</p>
+            <p>watch trailer</p>
           </a>
         </button>
         <br></br>
-        <p id="overview">{content.overview.substring(0,300)}...</p>
+        <p id="overview">{content.overview}</p>
       </div>
+    <div className="map">
+      <video id="background-video" autoplay loop muted poster="Map_bg.png">
+      <source src="Map_bg.mp4" type="video/mp4"></source>
+      </video>
+      <Map /></div> 
+    </div> 
     </div>
   );
 };

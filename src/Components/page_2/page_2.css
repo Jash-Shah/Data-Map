@@ -1,57 +1,91 @@
-*{
-    overflow: hidden;
-}
-.left{
+.left {
+    background-color: rgb(8, 8, 8);
+    color: #bc6ff1;
     opacity: initial;
-  position: relative;
-  margin-top: 2vh;
+    position: relative;
+    margin-top: 7vh;
     bottom: 3vh;
     left: 20px;
     width: 100%;
     max-width: 20%;
     height: 100%;
-    max-height: 100%;
-    /* border-radius: 1vw; */
+    flex: 2;
+    border-radius: 1vw;
+    border: solid purple 5px;
     font-size: 2.5vh;
-    color: white;
-  }
-  .left img{
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.map {
+    flex: 3;
+    /* background-color: rgb(69, 121, 118); */
+    margin-left: 2%;
+}
+
+.left img {
     bottom: 20vh;
     left: 20px;
-    /* width: 100%;
+    width: 100%;
     max-width: 20vw;
-    height: 20vh; */
-    width: 300px;
-    height: 50%;
+    height: 20vh;
     padding-bottom: 2vh;
-    border-radius:10px;
-  }
-  .left button{
-   
-   background-color: red;
-   color: white;
-   width: 70%;
+}
+
+.left button {
+    background-color: black;
+    color: #bc6ff1;
+    width: 70%;
     max-width: 8vw;
     height: 4vh;
-    margin-top: 5%;
-    text-align: center;
-    margin-left: 3vw;
-  }
-   .left button p{
-      font-size: 1vw;
-      font-weight: bolder;
-      position: relative;
-  }
-  #page2{
-    color: aliceblue;
+    margin-top: 3px;
+    margin-left: auto;
+}
+
+.left button p {
+    font-size: 1vw;
+    font-weight: bolder;
+    position: relative;
+}
+
+#page2 {
+    color: #bc6ff1;
     font-size: 1.5vw;
-  }
-  .left h1{
+}
+
+.left h1 {
     font-size: 100%;
     font-weight: bolder;
-    margin-left: 3.5vw;
-  }
-  #overview{
-    font-size: 80%;
-    padding-top: 5%; 
-  }
+    margin-left: auto;
+}
+
+#overview {
+    font-size: 70%;
+    padding-top: 10%;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.force-graph-container {
+    width: 50vw;
+}
+
+
+/* video background */
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}

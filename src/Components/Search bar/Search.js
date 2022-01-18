@@ -67,7 +67,6 @@ const Search = () => {
           <Button
             onClick={fetchSearch}
             variant="contained"
-            className="hi"
             style={{ marginLeft: -70,backgroundColor:'transparent',color:'white' }}
           >
             <SearchIcon fontSize="large" />
