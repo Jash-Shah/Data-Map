@@ -31,6 +31,7 @@ def similar_to(user_movie):
             link = {"source" : user_movie, "target" : mov, "value" : 1}
             final["nodes"].append(node)
             final["links"].append(link)
+        final["nodes"].append({"id": movie, "color" : "red"})
     except:
         res = null  
         final = null
