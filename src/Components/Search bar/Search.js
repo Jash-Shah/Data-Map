@@ -3,16 +3,14 @@ import { Button, TextField, ThemeProvider } from "@material-ui/core";
 import { createTheme } from "@material-ui/core/styles";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
- import axios from "axios";
- import Page2 from "../page_2/page_2";
  import { useNavigate } from "react-router-dom";
+
   
 const Search = () => {
   let navigate = useNavigate();
     const [type, setType] = useState(0);
     const [searchText, setSearchText] = useState("");
     const [page,setPage]=useState();
-    const api_key='0fcbf8981eaf96f3de0fc2c4a94cf6f7'
   const darkTheme = createTheme({
     palette: {
       type: "dark",
@@ -21,25 +19,26 @@ const Search = () => {
       },
     },
   });
-    const fetchSearch = async () => {
-      try {
-        // const { data } = await axios.get(
-        //   `https://api.themoviedb.org/3/search/movie}?api_key=${
-        //    api_key
-        //   }&language=en-US&query=${searchText}&page=${page}&include_adult=false`
-        // );
-        navigate(`/p?q=${ searchText }`);
-        // console.log(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+
+  const fetchSearch = async () => {
+    try {
+      navigate(`/map?movie=${ searchText }`);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
     useEffect(() => {
       window.scroll(0, 0);
-      // fetchSearch();
       // eslint-disable-next-line
     }, [type, page]);
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        console.log('hi')
+        fetchSearch();
+      }
+    }
 
   return (
     <div>
@@ -63,6 +62,7 @@ const Search = () => {
             }}
             inputProps={{ style: { fontSize:25} }}
             onChange={(e) => setSearchText(e.target.value)}
+            onKeyPress={handleKeyDown}
           />
           <Button
             onClick={fetchSearch}

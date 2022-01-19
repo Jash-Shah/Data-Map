@@ -1,62 +1,104 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import SingleContent from "../Movie/SingleContent/SingleContent";
 import { img_500 } from "../../config/config";
-import { searchText } from "../Search bar/Search";
-import { useSearchParams } from "react-router-dom";
-import "./page_2.css";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import Map from "../Map/Map";
+import Map_bg from "../video/Map_bg.mp4";
+
+import "./page_2.css";
 const Page2 = () => {
   const [content, setContent] = useState({});
+  const [video, setVideo] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
+  const q = searchParams.get("movie");
+  const navigate = useNavigate();
+  const checkError = async() => {
+    console.log("Q =", q)
+    var error = await axios.get(
+        `https://data-map-api.herokuapp.com/is_in/${q}`
+    );
+    console.log("IS ERROR = ", error.data);
+    if (error === 1)
+    {
+        navigate("/404")
+    }
+    else{
+      fetchMovies();
+        }
+};
 
-  const q = searchParams.get("q");
   const fetchMovies = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
     );
-    //  console.log(data);
+    console.log(data.results[0]);
     setContent(data.results[0]);
   };
+
+
   const fetchVideo = async () => {
-    const { video } = await axios.get(
-      `https://api.themoviedb.org/3/movie/49021/videos?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US`
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
     );
-    console.log(video);
+    var id=data.results[0].id
+    console.log(id)
+    var lang=data.results[0].original_language
+    console.log(lang)
+
+    const video = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=${lang}`
+    );
+    setVideo(video.data.results[0])
   };
+  
   useEffect(() => {
     window.scroll(0, 0);
-    fetchMovies();
+    checkError();
+    fetchVideo();
     // eslint-disable-next-line
   }, []);
 
   return (
     <div className="second">
-      <h1>"</h1>
-      <div className="top">
+      {
+        (content.original_title !== null)? 
+
+      <div className="top" >
+      <video className="video" autoPlay loop muted>
+      <source src={Map_bg} type="video/mp4" />
+      </video>
       <div className="left">
-        <h1>{content.original_title} </h1>
-        <img src={`${img_500}/${content.backdrop_path}`} />
+        <h1>{content.original_title}({(
+                      content.first_air_date ||
+                      content.release_date ||
+                      "-----"
+                    ).substring(0, 4)}
+                    )</h1>
+        <img src={`${img_500}/${content.backdrop_path}`} alt="poster" />
         <button>
           {" "}
           <a
             id="page2"
-            href="https://www.youtube.com/watch?v=8YjFbMbfXaQ"
+            href={`https://www.youtube.com/watch?v=${video.key}`}
             target="_blank"
+            alt="trailer"
+            rel="noreferrer" 
           >
-            <p>watch trailer</p>
+            <p>Watch Trailer</p>
           </a>
         </button>
         <br></br>
-        <p id="overview">{content.overview}</p>
+        <p id="overview">{content.overview}...</p>
       </div>
     <div className="map">
-      <video id="background-video" autoplay loop muted poster="Map_bg.png">
+      <video class="video" autoplay loop muted poster="Map_bg.png">
       <source src="Map_bg.mp4" type="video/mp4"></source>
       </video>
-      <Map /></div> 
+      <Map />
+      </div> 
     </div> 
-    </div>
+       : <div></div> }
+    </div> 
   );
 };
 
