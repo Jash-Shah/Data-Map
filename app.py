@@ -38,8 +38,7 @@ def similar_to(user_movie):
             val= val - 15
         final["nodes"].append({"id": similar[0][1], "color" : "rgba(165, 85, 253, 1)"})
     except:
-        res = null  
-        final = null
+        final = {"status" : "error404", "message" : "Movie not Found"}
     final =  jsonify(final)
     final.headers.add("Access-Control-Allow-Origin","*")
     return final
@@ -55,8 +54,8 @@ def is_in(movie):
     is_movie =  cursor.execute("SELECT COUNT(title) FROM Movies WHERE LOWER(title)=?",(movie,))
     is_movie = is_movie.fetchone()
     # print(is_movie)
-    is_movie.headers.add("Access-Control-Allow-Origin","*")
     is_movie = jsonify(is_movie)
+    is_movie.headers.add("Access-Control-Allow-Origin","*")
     return is_movie
 
 
