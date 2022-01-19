@@ -28,11 +28,11 @@ def similar_to(user_movie):
     val = 255
     # r,b = 255,255
     try:
-        for i in range(1,len(similar[0])):
+        for i in range(2,len(similar[0])):
             res[i] =  similar[0][i]
         for rank,mov in res.items():
             node = {"id" : mov , "color" : "white"}
-            link = {"source" : user_movie, "target" : mov, "value" : val}
+            link = {"source" : similar[0][1], "target" : mov, "value" : val}
             final["nodes"].append(node)
             final["links"].append(link)
             val= val - 15
