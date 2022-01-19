@@ -23,17 +23,17 @@ def similar_to(user_movie):
     similar = similar_movies.fetchall()
     res = {}
     final = {"nodes" : [] , "links" : []} # Format of JSON object for d3.js Graph
-    i = 255
+    val = 255
     # r,b = 255,255
     try:
         for i in range(1,len(similar[0])):
             res[i] =  similar[0][i]
         for rank,mov in res.items():
             node = {"id" : mov , "color" : "white"}
-            link = {"source" : user_movie, "target" : mov, "value" : i}
+            link = {"source" : user_movie, "target" : mov, "value" : val}
             final["nodes"].append(node)
             final["links"].append(link)
-            i = i - 10
+            val= val - 10
         final["nodes"].append({"id": movie, "color" : "white"})
     except:
         res = null  
