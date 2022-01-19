@@ -21,6 +21,8 @@ def similar_to(user_movie):
     #  Getting the 20 similar movies to users inputted choice in order
     similar_movies = cursor.execute("SELECT * FROM Movies WHERE LOWER(title)=?",(movie, ))
     similar = similar_movies.fetchall()
+    # for row in similar:
+    #     print(dict(row))
     res = {}
     final = {"nodes" : [] , "links" : []} # Format of JSON object for d3.js Graph
     val = 255
@@ -33,8 +35,8 @@ def similar_to(user_movie):
             link = {"source" : user_movie, "target" : mov, "value" : val}
             final["nodes"].append(node)
             final["links"].append(link)
-            val= val - 10
-        final["nodes"].append({"id": movie, "color" : "white"})
+            val= val - 15
+        final["nodes"].append({"id": similar[0][1], "color" : "rgba(165, 85, 253, 1)"})
     except:
         res = null  
         final = null
@@ -59,4 +61,4 @@ def is_in(movie):
 
 
 if  __name__ == "__main__":
-    app.run(debug = False)
+    app.run(debug = True)
