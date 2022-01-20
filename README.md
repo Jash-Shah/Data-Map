@@ -158,7 +158,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Applications
-It provides an *intuative visualtization of recommendations* which saves users from having to go through numbers,graphs,movie data temselves.
+It provides a visualization of recommendations which saves users from having to go through numbers, graphs, movie data themselves.
 
 ## Resourcess
 * [Resources](https://github.com/psankhe28/Data-Map/tree/pratiksha-dev/resources)
