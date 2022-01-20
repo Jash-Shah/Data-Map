@@ -107,9 +107,9 @@ Tools and technologies that you learnt and used in the project.
  ┗ 📜README.md  
  
 ## Future Prospects
-- [ ] Making website reponsive.
+- [ ] Making website responsive.
 - [ ] Making the data model & querying better.
-- [ ] Add 3d dispaly option for graph.
+- [ ] Add 3d display option for graph.
 - [ ] This concept can also be extended to *other media recommendation systems like books, music, games, etc*.
 - [ ] Giving users an ability to *make a wishlist* and then tailor the reccomedations further based on the movies in said wishlist.
 
