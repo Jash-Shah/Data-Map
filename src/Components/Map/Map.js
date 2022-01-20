@@ -1,15 +1,13 @@
 import ForceGraph2D from "react-force-graph-2d"; //importing react force graph module for our custom 2d graph
 import React, { useEffect, useState } from "react"; //importing hooks
 import axios from "axios";
-import { useNavigate, useSearchParams, Link } from "react-router-dom";
-import PageNotFound from "../Error_Page/PageNotFound";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Map = () => {
   const [graph, setGraph] = useState({ nodes: [], links: [] }); //useState hook sets the nodes and links
   const [movieName, setmovieName] = useState(); //useState hook sets the movies
   const [searchParams, setSearchParams] = useSearchParams(); //for decoding the query argument
   let q = searchParams.get("movie");
-  let flag = true;
   let navigate = useNavigate(); //variable for navigating between pages
   const fetchLink = async () => {
     //for fetching API from the ML model trained to give similar movies

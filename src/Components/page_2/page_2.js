@@ -70,7 +70,8 @@ const Page2 = () => {
 
         // making main class named top which include 2 class map and left 
       <div className="top" >
-      <video className="video" autoPlay loop muted> //for displaying background video
+      <video className="video" autoPlay loop muted>
+         {/* for displaying background video*/}
       <source src={Map_bg} type="video/mp4" />
       </video>
       {/* this class  is created to show data of searched movie */}
