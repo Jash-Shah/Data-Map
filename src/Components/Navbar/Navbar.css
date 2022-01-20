@@ -1,0 +1,45 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+.name:hover {
+    color: white !important;
+}
+
+.topnav {
+    margin-top: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+.bordered {
+    display: block;
+    color: #bc6ff1;
+    text-align: center;
+    padding: 1vh 3vh;
+    border-top: 5vh;
+    font-size: 3vh;
+    text-decoration: none;
+    float: right;
+    margin-right: 4vh;
+    transition-duration: 0.3s;
+    animation-duration: 1.5s;
+}
+
+.bordered:hover {
+    border-bottom: 3px solid white;
+    color: #bc6ff1;
+    border-radius: 1.5vh;
+}
+
+.active {
+    display: block;
+    color: #bc6ff1;
+    text-align: center;
+    border-top: 5vh;
+    padding: 1vh 3vh;
+    font-size: 4vh;
+    text-decoration: none;
+    float: left;
+    animation-duration: 1.5s;
+}

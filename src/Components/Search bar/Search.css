@@ -1,0 +1,80 @@
+.heading
+{
+    color: white;
+    margin-top: 50px;
+}
+.search {
+  display: flex;
+  margin:auto;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 60%;
+  position: relative;
+}
+.searchBox
+{
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    /* padding: 50px; */
+    /* width: 200px; */
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    text-align:end;
+    border-radius: 15px;
+    border: none;
+    background-size: 300% 100%;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.searchBox:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.searchBox:focus {
+    outline: none;
+    color: transparent;
+}
+@media only screen and (min-width: 75em) {
+    .search {
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .search {
+        padding-top: 17%;
+    }
+}
+
+@media only screen and (max-width:61.9em) {
+    .search {
+        padding-top: 19%;
+    }
+}
+
+@media only screen and (max-width: 48em) {
+    .search {
+        padding-top: 30%;
+    }
+    
+}
+
+@media only screen and (max-width: 36em) {
+    .search {
+        padding-top: 34%;
+    }
+    
+}
+@media only screen and (max-width: 921px) and (min-width:438px){
+    .search {
+        padding-right: 120px;
+        width: 70%;
+    }
+}

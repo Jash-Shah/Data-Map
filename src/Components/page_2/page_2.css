@@ -1,0 +1,82 @@
+.left {
+    color: #bc6ff1;
+    opacity: initial;
+    position: relative;
+    margin-top: 7vh;
+    bottom: 3vh;
+    left: 20px;
+    width: 100%;
+    max-width: 20%;
+    height: 100%;
+    flex: 2;
+    border-radius: 1vw;
+    border: solid purple 5px;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.map {
+    flex: 3;
+    margin-left: 2%;
+}
+
+.left img {
+    bottom: 20vh;
+    left: 20px;
+    width: 100%;
+    max-width: 20vw;
+    height: 20vh;
+    padding-bottom: 2vh;
+}
+
+.left button {
+    background-color: black;
+    color: #bc6ff1;
+    width: 70%;
+    max-width: 8vw;
+    height: 4vh;
+    margin-top: 3px;
+    margin-left: auto;
+}
+
+.left button p {
+    font-size: 1vw;
+    font-weight: bolder;
+    position: relative;
+}
+
+#page2 {
+    color: #bc6ff1;
+    font-size: 1.5vw;
+}
+
+.left h1 {
+    font-size: 100%;
+    font-weight: bolder;
+    margin-left: auto;
+}
+
+#overview {
+    font-size: 70%;
+    padding-top: 10%;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.force-graph-container {
+    width: 50vw;
+}
+
+
+/* video background */
+
+.video {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    top: 10%;
+}
