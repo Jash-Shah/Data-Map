@@ -60,51 +60,51 @@ Tools and technologies that you learnt and used in the project.
 - [x] Setup API using Flask for fetching ML data.
 
 <!-- List down all the tasks/features for your project and cross out the ones which are completed. -->
-📦Data-Map
- ┣ 📂public
- ┃ ┣ 📜favicon.ico
- ┃ ┣ 📜index.html
- ┃ ┣ 📜manifest.json
- ┃ ┣ 📜site.webmanifest
- ┃ ┗ 📜_redirects
- ┣ 📂src
- ┃ ┣ 📂Components
- ┃ ┃ ┣ 📂About
- ┃ ┃ ┃ ┣ 📜about.css
- ┃ ┃ ┃ ┣ 📜about.js
- ┃ ┃ ┃ ┗ 📜portfolio-image.png
- ┃ ┃ ┣ 📂Error_Page
- ┃ ┃ ┃ ┣ 📜PageNotFound.css
- ┃ ┃ ┃ ┗ 📜PageNotFound.js
- ┃ ┃ ┣ 📂Footer
- ┃ ┃ ┃ ┣ 📜Footer.css
- ┃ ┃ ┃ ┗ 📜Footer.js
- ┃ ┃ ┣ 📂Map
- ┃ ┃ ┃ ┗ 📜Map.js
- ┃ ┃ ┣ 📂Navbar
- ┃ ┃ ┃ ┣ 📜Navbar.css
- ┃ ┃ ┃ ┗ 📜Navbar.js
- ┃ ┃ ┣ 📂page_2
- ┃ ┃ ┃ ┣ 📜Map_bg.png
- ┃ ┃ ┃ ┣ 📜page_2.css
- ┃ ┃ ┃ ┗ 📜page_2.js
- ┃ ┃ ┣ 📂Search bar
- ┃ ┃ ┃ ┣ 📜Search.css
- ┃ ┃ ┃ ┗ 📜Search.js
- ┃ ┃ ┗ 📂video
- ┃ ┃ ┃ ┗ 📜Map_bg.mp4
- ┃ ┣ 📂config
- ┃ ┃ ┗ 📜config.js
- ┃ ┣ 📜App.css
- ┃ ┣ 📜App.js
- ┃ ┣ 📜App.test.js
- ┃ ┣ 📜index.js
- ┃ ┣ 📜reportWebVitals.js
- ┃ ┗ 📜setupTests.js
- ┣ 📜.gitignore
- ┣ 📜package-lock.json
- ┣ 📜package.json
- ┗ 📜README.md
+📦Data-Map  
+ ┣ 📂public  
+ ┃ ┣ 📜favicon.ico   
+ ┃ ┣ 📜index.html  
+ ┃ ┣ 📜manifest.json   
+ ┃ ┣ 📜site.webmanifest  
+ ┃ ┗ 📜_redirects  
+ ┣ 📂src  
+ ┃ ┣ 📂Components  
+ ┃ ┃ ┣ 📂About  
+ ┃ ┃ ┃ ┣ 📜about.css  
+ ┃ ┃ ┃ ┣ 📜about.js  
+ ┃ ┃ ┃ ┗ 📜portfolio-image.png  
+ ┃ ┃ ┣ 📂Error_Page  
+ ┃ ┃ ┃ ┣ 📜PageNotFound.css  
+ ┃ ┃ ┃ ┗ 📜PageNotFound.js  
+ ┃ ┃ ┣ 📂Footer  
+ ┃ ┃ ┃ ┣ 📜Footer.css  
+ ┃ ┃ ┃ ┗ 📜Footer.js  
+ ┃ ┃ ┣ 📂Map  
+ ┃ ┃ ┃ ┗ 📜Map.js  
+ ┃ ┃ ┣ 📂Navbar  
+ ┃ ┃ ┃ ┣ 📜Navbar.css  
+ ┃ ┃ ┃ ┗ 📜Navbar.js  
+ ┃ ┃ ┣ 📂page_2  
+ ┃ ┃ ┃ ┣ 📜Map_bg.png  
+ ┃ ┃ ┃ ┣ 📜page_2.css  
+ ┃ ┃ ┃ ┗ 📜page_2.js  
+ ┃ ┃ ┣ 📂Search bar  
+ ┃ ┃ ┃ ┣ 📜Search.css  
+ ┃ ┃ ┃ ┗ 📜Search.js  
+ ┃ ┃ ┗ 📂video  
+ ┃ ┃ ┃ ┗ 📜Map_bg.mp4  
+ ┃ ┣ 📂config  
+ ┃ ┃ ┗ 📜config.js  
+ ┃ ┣ 📜App.css  
+ ┃ ┣ 📜App.js  
+ ┃ ┣ 📜App.test.js  
+ ┃ ┣ 📜index.js  
+ ┃ ┣ 📜reportWebVitals.js  
+ ┃ ┗ 📜setupTests.js  
+ ┣ 📜.gitignore  
+ ┣ 📜package-lock.json  
+ ┣ 📜package.json  
+ ┗ 📜README.md  
  
 ## Future Prospects
 - [ ] Making website reponsive.
