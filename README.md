@@ -18,17 +18,17 @@
 Don't forget to replace the link here with *your own Github repository* link.
 
 Along with this, add the link of the drive folder that contains the app APK/Screenshots/Screen Recordings. If you have hosted your project on the web, add that link as well. -->
-Data-Map is a *movie recommendation* website which can help users discover movies which are similar to a particular movie the user enters, but with a twist! Instead of simply listing them  it creates a *Map of the recommendations*. 
+Data-Map is a **movie recommendation** website which can help users discover movies which are similar to a particular movie the user enters, but with a twist! Instead of simply listing them  it creates a *Map of the recommendations*. 
 
 * The Map is displayed with the user entered title at the centre and the reccomended movies spread around it.
-* Their *attributes indicating their degree of similarity*.
+* Their **attributes indicating their degree of similarity**.
 
 The user can also navigate to maps of the reccomended movies by just clicking on them.
-* The ML model uses *Cosine Similarity* and *K-Nearest Neighbours* algorithms to predict the movies.
-* Used *Flask REST API* for backend querying of model. 
-* *react-force-graph* module is used for displaying the data in map format. 
-* *HTML/CSS/JS* and *React* are used for building the UI and other features of the website. 
-* *TMDB 5000 Movie DataSet* is used for displaying movie info.
+* The ML model uses **Cosine Similarity** and **K-Nearest Neighbours** algorithms to predict the movies.
+* Used **Flask REST API** for backend querying of model. 
+* **react-force-graph** module is used for displaying the data in map format. 
+* **HTML/CSS/JS** and **React** are used for building the UI and other features of the website. 
+* **TMDB 5000 Movie DataSet** is used for displaying movie info.
 * GitHub repo link: [GitHub](https://github.com/psankhe28/Data-Map)
 * Drive link: [Drive](https://drive.google.com/drive/folders/1ZmfBMEtB4kXJ2Nkdq5H-4-CCTHRwF7iU?usp=sharing)
 * Website link: [Website](https://data-map.vercel.app/)
@@ -110,6 +110,8 @@ Tools and technologies that you learnt and used in the project.
 - [ ] Making website reponsive.
 - [ ] Making the data model & querying better.
 - [ ] Add 3d dispaly option for graph.
+- [ ] This concept can also be extended to *other media recommendation systems like books, music, games, etc*.
+- [ ] Giving users an ability to *make a wishlist* and then tailor the reccomedations further based on the movies in said wishlist.
 
 ## Project Setup
 #### File Structure
@@ -158,12 +160,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Applications
-It provides an intuative visualtization of recommendations which saves users from having to go through numbers,graphs,movie data temselves.
+It provides an *intuative visualtization of recommendations* which saves users from having to go through numbers,graphs,movie data temselves.
 
-
-## Future scope
-* This concept can also be extended to other media recommendation systems like books, music, games, etc.
-* Giving users an ability to make a wishlist and then tailor the reccomedations further based on the movies in said wishlist.
 ## Screenshots
 <!-- Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
 
