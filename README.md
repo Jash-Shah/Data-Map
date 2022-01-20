@@ -60,6 +60,7 @@ Tools and technologies that you learnt and used in the project.
 - [x] Setup API using Flask for fetching ML data.
 
 <!-- List down all the tasks/features for your project and cross out the ones which are completed. -->
+#### File Structure
 📦Data-Map  
  ┣ 📂public  
  ┃ ┣ 📜favicon.ico   
@@ -114,8 +115,6 @@ Tools and technologies that you learnt and used in the project.
 - [ ] Giving users an ability to *make a wishlist* and then tailor the reccomedations further based on the movies in said wishlist.
 
 ## Project Setup
-#### File Structure
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -162,24 +161,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Applications
 It provides an *intuative visualtization of recommendations* which saves users from having to go through numbers,graphs,movie data temselves.
 
-## Screenshots
-<!-- Add a few screenshots for parts of the project completed till now to give the viewer a quick idea of what your project looks like. After all, a picture speaks a thousand words.
-
-You'll have to link the screenshots from your drive folder here. -->
-### 1. Landing Page
-![Screenshot alt text]("")<br/><br/><br/>
-
-
-### 2. Movie Description and Map Template
-![Screenshot alt text]("")<br/><br/>
-
-### 3. About Page
-![Screenshot alt text]("")<br/><br/>
-
-### 4. Map Template
-![Video of Map]( https://drive.google.com/uc?export=view&id=1E0OD6x1Ab-4Hg0uRCNdK811ZJ-03f2aC "Map Template Video")<br/><br/>
-<!-- Use this template as a guide for writing your documentation. Feel free to customize and adapt it for you project.
-For more Markdown syntax help, visit [here](https://www.markdownguide.org/basic-syntax/) -->
+## Resourcess
+* [Resources](https://github.com/psankhe28/Data-Map/tree/pratiksha-dev/resources)
 
 ## Mentors
   This project would not have been possible without the continous support of our mentors.
