@@ -47,9 +47,9 @@ def similar_to(user_movie):
 '''
 Returns 0 or 1 depending on wheter given movie is in the db or not
 '''
-@app.route("/is_in/<string:movie>", methods = ["GET"])
-def is_in(movie):
-    conn = sqlite3.connect('Movies.db')
+@app.route("/is_in/<string:user_movie>", methods = ["GET"])
+def is_in(user_movie):
+    movie = user_movie.lower() #converting user enetered string to lowercase
     cursor = conn.cursor()
     is_movie =  cursor.execute("SELECT COUNT(title) FROM Movies WHERE LOWER(title)=?",(movie,))
     is_movie = is_movie.fetchone()
