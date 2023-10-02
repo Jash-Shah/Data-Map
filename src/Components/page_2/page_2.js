@@ -19,7 +19,7 @@ const Page2 = () => {
   const checkError = async() => {
     console.log("Q =", q)
     var error = await axios.get(
-        `https://data-map-api.herokuapp.com/is_in/${q}`
+        `http://127.0.0.1:5000/is_in/${q}`
     );
     console.log("IS ERROR = ", error.data);
     if (error === 1)
@@ -35,7 +35,7 @@ const Page2 = () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
     );
-    console.log(data.results[0]); //checking in console if we are getting data or not 
+    console.log("tmdb movies data = ", data.results[0]); //checking in console if we are getting data or not 
     setContent(data.results[0]);  //setting the data we got from api 
   };
 
@@ -45,7 +45,7 @@ const Page2 = () => {
       `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
     );
     var id=data.results[0].id
-    console.log(id)
+    console.log("tmdb movie id = ",id)
     var lang=data.results[0].original_language
     console.log(lang)
 

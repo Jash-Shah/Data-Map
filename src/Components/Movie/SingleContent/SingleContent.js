@@ -12,6 +12,7 @@ import {
 const SingleContent = ({
   id
 }) => {
+  console.log(id);
   const [isOpen, setIsOpen] = useState(false);
   const [content, setContent] = useState();
   const [video, setVideo] = useState();
@@ -25,7 +26,7 @@ const SingleContent = ({
     );
 
     setContent(data);
-    // console.log(data);
+    console.log("data = ", data);
   };
 
   const fetchVideo = async () => {

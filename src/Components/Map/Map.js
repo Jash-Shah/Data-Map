@@ -13,7 +13,7 @@ const Map = () => {
     //for fetching API from the ML model trained to give similar movies
     console.log("Q =", q);
     var movie = await axios.get(
-      `https://data-map-api.herokuapp.com/similar_to/${q}` //q is the moviename passed in the link for getting specific nodes and links for the movie specified
+      `http://127.0.0.1:5000/similar_to/${q}` //q is the moviename passed in the link for getting specific nodes and links for the movie specified
     );
     console.log("MOVIE = ", movie.data);
     if (movie.data.status !== undefined && movie.data.status === "error404") {
