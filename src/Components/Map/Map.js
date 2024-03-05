@@ -48,7 +48,7 @@ const Map = () => {
     <ForceGraph2D
       graphData={graph}
       //sets the graph as a Force2d graph
-      linkColor={(link) => "#9ef0d0"}
+      // linkColor={(link) => "#9ef0d0"}
       minZoom={4} //minimim zoom of canvas
       maxZoom={7} //maximum zoom of canvas
       // linkDirectionalArrowLength = { link => link.value }
@@ -63,11 +63,11 @@ const Map = () => {
       onNodeClick={handleClick}
       nodeVal={(node) => node.val}
       nodeCanvasObject={(node, ctx, globalScale) => {
-        if (node.id === graph.nodes[14].id) {
+        if (node.id === graph.nodes[9].id) {
           node.color = "white"; //root node colored white
           node.val = 0.95;
         }
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < 15; i++) {
           if (node.id === graph.nodes[i].id) {
             node.val = Math.pow(1.2, Math.sqrt(i)); //custom function for node size
             node.color = "#d083f9";
