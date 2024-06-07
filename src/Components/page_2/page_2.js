@@ -14,6 +14,8 @@ const Page2 = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const q = searchParams.get("movie");
   const navigate = useNavigate(); //useNavigate function to navigate among the pages
+  const omdb_api_key = "3d253548"
+  var imdbID = null
 
   // writing function to catch error i.e. to find out  whether movie is present or not in given api
   const checkError = async() => {
@@ -32,27 +34,39 @@ const Page2 = () => {
 };
 // writing function to fetch movie
   const fetchMovies = async () => {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
-    );
-    console.log("tmdb movies data = ", data.results[0]); //checking in console if we are getting data or not 
-    setContent(data.results[0]);  //setting the data we got from api 
+    // const { data } = await axios.get(
+    //   `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
+    // );
+    // console.log("tmdb movies data = ", data.results[0]); //checking in console if we are getting data or not 
+    // setContent(data.results[0]);  //setting the data we got from api 
+    const {data} = await axios.get(
+      `http://www.omdbapi.com/?t=${q}&apikey=${omdb_api_key}`
+    )
+    console.log(data)
+    setContent(data)
+    imdbID = data.imdbID
   };
 
 // writing a function to get video/trailer of movie
   const fetchVideo = async () => {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
-    );
-    var id=data.results[0].id
-    console.log("tmdb movie id = ",id)
-    var lang=data.results[0].original_language
-    console.log(lang)
+    // const { data } = await axios.get(
+    //   `https://api.themoviedb.org/3/search/movie?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=en-US&query=${q}&page=1&include_adult=false`
+    // );
+    // var id=data.results[0].id
+    // console.log("tmdb movie id = ",id)
+    // var lang=data.results[0].original_language
+    // console.log(lang)
 
-    const video = await axios.get(
-      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=${lang}`
-    );
-    setVideo(video.data.results[0])
+    // const video = await axios.get(
+    //   `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0fcbf8981eaf96f3de0fc2c4a94cf6f7&language=${lang}`
+    // );
+    // setVideo(video.data.results[0])
+    console.log(imdbID)
+    const {data2} = await axios.get(
+      `https://api.kinocheck.de/movies?imdb_id=${imdbID}`
+    )
+    console.log(data2)
+    
   };
   // it is used to call checkerror function and fetchvideo function after rendering
   useEffect(() => {
@@ -76,13 +90,8 @@ const Page2 = () => {
       </video>
       {/* this class  is created to show data of searched movie */}
       <div className="left">
-        <h1>{content.original_title}({(
-                      content.first_air_date ||
-                      content.release_date ||
-                      "-----"
-                    ).substring(0, 4)}
-                    )</h1>
-        <img src={`${img_500}/${content.backdrop_path}`} alt="poster" />
+        <h1>{content.Title}({content.Released})</h1>
+        <img src={`${content.Poster}`} alt="poster"/>
         <button>
           {" "}
           <a
@@ -96,7 +105,7 @@ const Page2 = () => {
           </a>
         </button>
         <br></br>
-        <p id="overview">{content.overview}...</p>
+        <p id="overview">{content.Plot}...</p>
       </div>
        {/* this class  is created to show map of searched movie */}
     <div className="map">
